@@ -24,8 +24,9 @@ body {
   display: flex;
   align-items: center; }
   .innerheader #logo {
-    margin: 0 8px 0 0;
+    margin: 0 15px 0 0;
     padding: 2px 15px;
+    text-align: center;
     border: 3px solid cornflowerblue;
     color: cornflowerblue;
     font-size: 2.5em;
@@ -33,7 +34,7 @@ body {
     border-radius: 8px; }
 
 .uinav {
-  margin: 0 0 0 8px;
+  margin: 0 0 0 15px;
   cursor: pointer; }
   .uinav .bar {
     width: 30px;
@@ -53,8 +54,10 @@ body {
     transition: .5s; }
 
 .nav {
-  width: 0;
-  background-color: green;
+  width: 25%;
+  background-color: cornflowerblue;
+  border: 1.5px solid #3D3D3D;
+  padding: 15px;
   overflow: hidden;
   float: right;
   position: fixed;
@@ -66,5 +69,28 @@ body {
 
 .closeNav {
   width: 30%; }
+
+.formwrap {
+  width: 85%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1.5px solid #3D3D3D;
+  background-color: #EDEDED; }
+  .formwrap #user_name, .formwrap #team_name {
+    width: 100%;
+    padding: 6px;
+    margin: 6px auto;
+    border: 1px solid #3D3D3D; }
+  .formwrap #submit {
+    width: 60%;
+    padding: 4px 0;
+    background-color: #EDEDED;
+    font-size: .75em;
+    border: 1px solid #3D3D3D;
+    text-align: center; }
+    .formwrap #submit:hover {
+      background-color: #3D3D3D;
+      color: #EDEDED;
+      cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */
