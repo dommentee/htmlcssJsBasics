@@ -60,11 +60,9 @@ body {
   }
 }
 .nav {
-  // width: 0;
-  width: 25%;
+  width: 0;
+  // width: 25%;
   background-color: cornflowerblue;
-  border: 1.5px solid #3D3D3D;
-  padding: 15px;
   overflow: hidden;
   float: right;
   position: fixed;
@@ -75,10 +73,10 @@ body {
   .navcontent {
     position: relative;
   }
-
 }
 .closeNav {
-  width: 30%;
+  width: 25%;
+  padding: 15px;
 }
 
 .formwrap {
@@ -87,6 +85,9 @@ body {
   padding: 15px;
   border: 1.5px solid #3D3D3D;
   background-color: #EDEDED;
+  h4 {
+    margin: 15px 0;
+  }
   #user_name, #team_name {
     width: 100%;
     padding: 6px;
@@ -97,7 +98,7 @@ body {
   #submit {
     width: 60%;
     padding: 4px 0;
-    background-color: #EDEDED;
+    background-color: cornflowerblue;
     font-size: .75em;
     border: 1px solid #3D3D3D;
     text-align: center;
@@ -106,6 +107,32 @@ body {
       color: #EDEDED;
       cursor: pointer;
     }
+  } 
+}
+.pick_color {
+  width: 85%;
+  margin: auto;
+  padding: 15px 0;
+
+  .tabwrap {
+    background-color: red;
+
+    .tab_links {
+      display: flex;
+      background-color: yellow;
+    }
+    .tabbtn {
+      background-color: green;
+      width: 25%;
+      font-size: .8em;
+      text-align: center;
+      padding: 1.5px 0;
+      border: 1px solid;
+      &:hover {
+        background-color: grey;
+        cursor: pointer; 
+      }
+    }
+    
   }
-  
 }

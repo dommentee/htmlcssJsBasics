@@ -54,10 +54,8 @@ body {
     transition: .5s; }
 
 .nav {
-  width: 25%;
+  width: 0;
   background-color: cornflowerblue;
-  border: 1.5px solid #3D3D3D;
-  padding: 15px;
   overflow: hidden;
   float: right;
   position: fixed;
@@ -68,7 +66,8 @@ body {
     position: relative; }
 
 .closeNav {
-  width: 30%; }
+  width: 25%;
+  padding: 15px; }
 
 .formwrap {
   width: 85%;
@@ -76,6 +75,8 @@ body {
   padding: 15px;
   border: 1.5px solid #3D3D3D;
   background-color: #EDEDED; }
+  .formwrap h4 {
+    margin: 15px 0; }
   .formwrap #user_name, .formwrap #team_name {
     width: 100%;
     padding: 6px;
@@ -84,7 +85,7 @@ body {
   .formwrap #submit {
     width: 60%;
     padding: 4px 0;
-    background-color: #EDEDED;
+    background-color: cornflowerblue;
     font-size: .75em;
     border: 1px solid #3D3D3D;
     text-align: center; }
@@ -92,5 +93,25 @@ body {
       background-color: #3D3D3D;
       color: #EDEDED;
       cursor: pointer; }
+
+.pick_color {
+  width: 85%;
+  margin: auto;
+  padding: 15px 0; }
+  .pick_color .tabwrap {
+    background-color: red; }
+    .pick_color .tabwrap .tab_links {
+      display: flex;
+      background-color: yellow; }
+    .pick_color .tabwrap .tabbtn {
+      background-color: green;
+      width: 25%;
+      font-size: .8em;
+      text-align: center;
+      padding: 1.5px 0;
+      border: 1px solid; }
+      .pick_color .tabwrap .tabbtn:hover {
+        background-color: grey;
+        cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */
