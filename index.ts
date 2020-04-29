@@ -2,7 +2,7 @@
 let teamName: any = document.getElementById('team_name');
 let teamLogo: any = document.getElementById('logo');
 const userTeam: any = document.getElementById('user_team')
-let userName: any = document.getElementById('user_name');
+const userName: any = document.getElementById('user_name');
 const user: any = document.getElementById('user');
 const submitButton = document.getElementById('submit');
 
@@ -31,26 +31,24 @@ function openNav() {
 };
 burgerMenue.addEventListener('click', openNav);
 
+let person: string;
+let team: string;
+let logo: CharacterData;
+
 //inner nav
 const handlesubmit = () => {
-  let person: string;
-  let team: string;
-
-  if (userName != null && teamName != null) {
+  if (teamName.value && userName.value) {
     person = userName.value;
     team = teamName.value;
-  }
-  if (!person || !team ) {
-    alert('enter names');
-    return
-  }
-  sessionStorage.setItem(userName, person)
-  user.innerHTML = ` Hi ${ sessionStorage.getItem(userName)}`;
+    logo = teamName.value.charAt(0);
+    userTeam.innerHTML = team;
+    teamLogo.innerHTML = logo;
+    sessionStorage.setItem(userName, person)
+    user.innerHTML = ` Hi ${sessionStorage.getItem(userName)}`;
+    userName.value = ''
+    teamName.value = '';
+  }else if (!person || !team) alert('enter names'); 
   
-  userTeam.innerHTML = team;
-  userName.value = ' ';
-  teamName.value = ' ';
-  teamLogo.innerHTML = team.charAt(0);
 };
 submitButton.addEventListener('click', handlesubmit);
 

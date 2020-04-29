@@ -29,23 +29,23 @@ function openNav() {
 }
 ;
 burgerMenue.addEventListener('click', openNav);
+var person;
+var team;
+var logo;
 //inner nav
 var handlesubmit = function () {
-    var person;
-    var team;
-    if (userName != null && teamName != null) {
+    if (teamName.value && userName.value) {
         person = userName.value;
         team = teamName.value;
+        logo = teamName.value.charAt(0);
+        userTeam.innerHTML = team;
+        teamLogo.innerHTML = logo;
+        sessionStorage.setItem(userName, person);
+        user.innerHTML = " Hi " + sessionStorage.getItem(userName);
+        userName.value = '';
+        teamName.value = '';
     }
-    if (!person || !team) {
+    else if (!person || !team)
         alert('enter names');
-        return;
-    }
-    sessionStorage.setItem(userName, person);
-    user.innerHTML = " Hi " + sessionStorage.getItem(userName);
-    userTeam.innerHTML = team;
-    userName.value = ' ';
-    teamName.value = ' ';
-    teamLogo.innerHTML = team.charAt(0);
 };
 submitButton.addEventListener('click', handlesubmit);
